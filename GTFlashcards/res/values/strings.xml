@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">GTFlashcards</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="login">Login</string>
+    <string name="browse">Browse</string>
+    <string name="login_heading"><b>Please login using your GA Tech credentials</b></string>
+
+</resources>
