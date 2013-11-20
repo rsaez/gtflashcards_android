@@ -27,4 +27,11 @@
 	    android:text="New Flashcard" 
 	    android:onClick="goToNewFlashcardActivity" />
 
+	<Button
+	    android:id="@+id/button2"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:text="My Decks" 
+	    android:onClick="goToMyDecksActivity" />
+
 </LinearLayout>
