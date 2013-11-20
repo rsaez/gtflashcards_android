@@ -19,12 +19,19 @@
         android:layout_height="wrap_content"
         android:text="@string/browse"
         android:onClick="" />
-
+	
+	<Button
+	    android:id="@+id/button2"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:text="Create Deck" 
+	    android:onClick="goToNewDeckActivity" />
+	
 	<Button
 	    android:id="@+id/button1"
 	    android:layout_width="fill_parent"
 	    android:layout_height="wrap_content"
-	    android:text="New Flashcard" 
+	    android:text="Create Flashcard" 
 	    android:onClick="goToNewFlashcardActivity" />
 
 	<Button

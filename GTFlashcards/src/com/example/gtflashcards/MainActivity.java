@@ -12,7 +12,7 @@ import android.view.View;
 
 public class MainActivity extends Activity {
 	
-	ArrayList<Deck> decks;
+	static ArrayList<Deck> decks;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -36,15 +36,6 @@ public class MainActivity extends Activity {
     	startActivity(intent);
     }
     
-    public void createDeck() {
-    	int id = 1; //todo: use real id from server
-    	String name = "newDeck"; //todo: get name from input field on activity
-    	int flashcardCount = 0; //todo: get real count from server
-    	
-    	Deck deck = new Deck(id, name, flashcardCount);
-    	decks.add(deck);
-    }
-    
     public void goToNewFlashcardActivity(View view) {
     	Intent intent = new Intent(this, NewFlashcardActivity.class);
     	startActivity(intent);
@@ -53,6 +44,19 @@ public class MainActivity extends Activity {
     public void goToMyDecksActivity(View view) {
     	Intent intent = new Intent(this, FlashcardListActivity.class);
     	startActivity(intent);
+    }
+    
+    public void goToNewDeckActivity(View view) {
+    	Intent intent = new Intent(this, NewDeckActivity.class);
+    	startActivity(intent);
+    }
+    
+    public static ArrayList<String> getDeckNames() {
+    	ArrayList<String> deckNames = new ArrayList<String>(); 
+    	for (Deck deck : decks) {
+    		deckNames.add(deck.getName());
+    	}
+    	return deckNames;
     }
 
 }

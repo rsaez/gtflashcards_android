@@ -10,5 +10,6 @@
     <string name="title_activity_new_flashcard">NewFlashcardActivity</string>
     <string name="title_deck_list">Decks</string>
     <string name="title_deck_detail">Deck Detail</string>
+    <string name="title_activity_new_deck">NewDeckActivity</string>
 
 </resources>

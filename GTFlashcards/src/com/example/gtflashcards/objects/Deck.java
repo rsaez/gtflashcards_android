@@ -8,10 +8,10 @@ public class Deck {
 	String name;
 	ArrayList<Flashcard> flashcards;
 	
-	public Deck(int id, String name, int flashcardCount) {
+	public Deck(int id, String name) {
 		this.id = id;
 		this.name = name;
-		this.flashcardCount = flashcardCount;
+		this.flashcardCount = 0;
 		
 		flashcards = new ArrayList<Flashcard>();
 	}
@@ -26,5 +26,9 @@ public class Deck {
 
 	public void addFlashcard(Flashcard flashcard) {
 		flashcards.add(flashcard);
+	}
+	
+	public String getName() {
+		return name;
 	}
 }

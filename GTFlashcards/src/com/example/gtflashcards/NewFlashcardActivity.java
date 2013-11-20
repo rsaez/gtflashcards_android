@@ -26,12 +26,10 @@ public class NewFlashcardActivity extends Activity {
 	
 	public void addItemsToDeckSpinner() {
 		deckSpinner = (Spinner) findViewById(R.id.deck_spinner);
-		List<String> list = new ArrayList<String>();
-		list.add("list 1");
-		list.add("list 2");
-		list.add("list 3");
+		ArrayList<String> deckNames = MainActivity.getDeckNames();
+		deckNames.add(0, "No Deck");
 		ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this,
-			android.R.layout.simple_spinner_item, list);
+			android.R.layout.simple_spinner_item, deckNames);
 		dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		deckSpinner.setAdapter(dataAdapter);
 	}
