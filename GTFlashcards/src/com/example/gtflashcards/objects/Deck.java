@@ -16,6 +16,14 @@ public class Deck {
 		flashcards = new ArrayList<Flashcard>();
 	}
 	
+	public ArrayList<Flashcard> getFlashcards() {
+		return flashcards;
+	}
+
+	public void setFlashcards(ArrayList<Flashcard> flashcards) {
+		this.flashcards = flashcards;
+	}
+
 	public void addFlashcard(Flashcard flashcard) {
 		flashcards.add(flashcard);
 	}
