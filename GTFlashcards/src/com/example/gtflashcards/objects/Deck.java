@@ -1,6 +1,7 @@
-package com.example.gtflashcards;
+package com.example.gtflashcards.objects;
 
 import java.util.ArrayList;
+
 
 public class Deck {
 	int id, flashcardCount;
