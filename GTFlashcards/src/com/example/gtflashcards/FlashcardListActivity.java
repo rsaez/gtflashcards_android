@@ -8,19 +8,19 @@ import android.support.v4.app.FragmentActivity;
  * An activity representing a list of Decks. This activity has different
  * presentations for handset and tablet-size devices. On handsets, the activity
  * presents a list of items, which when touched, lead to a
- * {@link DeckDetailActivity} representing item details. On tablets, the
+ * {@link FlashcardDetailActivity} representing item details. On tablets, the
  * activity presents the list of items and item details side-by-side using two
  * vertical panes.
  * <p>
  * The activity makes heavy use of fragments. The list of items is a
- * {@link DeckListFragment} and the item details (if present) is a
- * {@link DeckDetailFragment}.
+ * {@link FlashcardListFragment} and the item details (if present) is a
+ * {@link FlashcardDetailFragment}.
  * <p>
- * This activity also implements the required {@link DeckListFragment.Callbacks}
+ * This activity also implements the required {@link FlashcardListFragment.Callbacks}
  * interface to listen for item selections.
  */
-public class DeckListActivity extends FragmentActivity implements
-		DeckListFragment.Callbacks {
+public class FlashcardListActivity extends FragmentActivity implements
+		FlashcardListFragment.Callbacks {
 
 	/**
 	 * Whether or not the activity is in two-pane mode, i.e. running on a tablet
@@ -31,7 +31,7 @@ public class DeckListActivity extends FragmentActivity implements
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_deck_list);
+		setContentView(R.layout.activity_flashcard_list);
 
 		if (findViewById(R.id.deck_detail_container) != null) {
 			// The detail container view will be present only in the
@@ -42,7 +42,7 @@ public class DeckListActivity extends FragmentActivity implements
 
 			// In two-pane mode, list items should be given the
 			// 'activated' state when touched.
-			((DeckListFragment) getSupportFragmentManager().findFragmentById(
+			((FlashcardListFragment) getSupportFragmentManager().findFragmentById(
 					R.id.deck_list)).setActivateOnItemClick(true);
 		}
 
@@ -50,7 +50,7 @@ public class DeckListActivity extends FragmentActivity implements
 	}
 
 	/**
-	 * Callback method from {@link DeckListFragment.Callbacks} indicating that
+	 * Callback method from {@link FlashcardListFragment.Callbacks} indicating that
 	 * the item with the given ID was selected.
 	 */
 	@Override
@@ -60,8 +60,8 @@ public class DeckListActivity extends FragmentActivity implements
 			// adding or replacing the detail fragment using a
 			// fragment transaction.
 			Bundle arguments = new Bundle();
-			arguments.putString(DeckDetailFragment.ARG_ITEM_ID, id);
-			DeckDetailFragment fragment = new DeckDetailFragment();
+			arguments.putString(FlashcardDetailFragment.ARG_ITEM_ID, id);
+			FlashcardDetailFragment fragment = new FlashcardDetailFragment();
 			fragment.setArguments(arguments);
 			getSupportFragmentManager().beginTransaction()
 					.replace(R.id.deck_detail_container, fragment).commit();
@@ -69,8 +69,8 @@ public class DeckListActivity extends FragmentActivity implements
 		} else {
 			// In single-pane mode, simply start the detail activity
 			// for the selected item ID.
-			Intent detailIntent = new Intent(this, DeckDetailActivity.class);
-			detailIntent.putExtra(DeckDetailFragment.ARG_ITEM_ID, id);
+			Intent detailIntent = new Intent(this, FlashcardDetailActivity.class);
+			detailIntent.putExtra(FlashcardDetailFragment.ARG_ITEM_ID, id);
 			startActivity(detailIntent);
 		}
 	}

@@ -11,10 +11,10 @@ import com.example.gtflashcards.dummy.DummyContent;
 
 /**
  * A fragment representing a single Deck detail screen. This fragment is either
- * contained in a {@link DeckListActivity} in two-pane mode (on tablets) or a
- * {@link DeckDetailActivity} on handsets.
+ * contained in a {@link FlashcardListActivity} in two-pane mode (on tablets) or a
+ * {@link FlashcardDetailActivity} on handsets.
  */
-public class DeckDetailFragment extends Fragment {
+public class FlashcardDetailFragment extends Fragment {
 	/**
 	 * The fragment argument representing the item ID that this fragment
 	 * represents.
@@ -30,7 +30,7 @@ public class DeckDetailFragment extends Fragment {
 	 * Mandatory empty constructor for the fragment manager to instantiate the
 	 * fragment (e.g. upon screen orientation changes).
 	 */
-	public DeckDetailFragment() {
+	public FlashcardDetailFragment() {
 	}
 
 	@Override
@@ -49,7 +49,7 @@ public class DeckDetailFragment extends Fragment {
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
-		View rootView = inflater.inflate(R.layout.fragment_deck_detail,
+		View rootView = inflater.inflate(R.layout.fragment_flashcard_detail,
 				container, false);
 
 		// Show the dummy content as text in a TextView.

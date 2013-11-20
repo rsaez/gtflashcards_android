@@ -50,7 +50,7 @@ public class MainActivity extends Activity {
     }
     
     public void goToMyDecksActivity(View view) {
-    	Intent intent = new Intent(this, DeckListActivity.class);
+    	Intent intent = new Intent(this, FlashcardListActivity.class);
     	startActivity(intent);
     }
 

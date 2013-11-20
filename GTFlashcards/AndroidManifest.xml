@@ -32,13 +32,13 @@
             android:label="@string/title_activity_new_flashcard" >
         </activity>
         <activity
-            android:name="com.example.gtflashcards.DeckListActivity"
+            android:name="com.example.gtflashcards.FlashcardListActivity"
             android:label="@string/title_deck_list" >
         </activity>
         <activity
-            android:name="com.example.gtflashcards.DeckDetailActivity"
+            android:name="com.example.gtflashcards.FlashcardDetailActivity"
             android:label="@string/title_deck_detail"
-            android:parentActivityName=".DeckListActivity" >
+            android:parentActivityName=".FlashcardListActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".DeckListActivity" />

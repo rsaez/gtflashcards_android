@@ -46,7 +46,7 @@ public final class R {
         public static final int textView3=0x7f080010;
     }
     public static final class layout {
-        public static final int activity_deck_detail=0x7f030000;
+        public static final int activity_flashcard_detail=0x7f030000;
         /** 
     Layout alias to replace the single-pane version of the layout with a
     two-pane version on Large screens.
@@ -62,13 +62,13 @@ public final class R {
     http://developer.android.com/training/multiscreen/screensizes.html#TaskUseAliasFilters
     
          */
-        public static final int activity_deck_list=0x7f030001;
-        public static final int activity_deck_twopane=0x7f030002;
+        public static final int activity_flashcard_list=0x7f030001;
+        public static final int activity_flashcard_twopane=0x7f030002;
         public static final int activity_login=0x7f030003;
         public static final int activity_main=0x7f030004;
         public static final int activity_new_flashcard=0x7f030005;
         public static final int deck=0x7f030006;
-        public static final int fragment_deck_detail=0x7f030007;
+        public static final int fragment_flashcard_detail=0x7f030007;
     }
     public static final class menu {
         public static final int login=0x7f070000;
