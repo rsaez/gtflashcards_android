@@ -1,16 +1,21 @@
 package com.example.gtflashcards;
 
-import android.os.Bundle;
+import java.util.ArrayList;
+
 import android.app.Activity;
 import android.content.Intent;
+import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 
 public class MainActivity extends Activity {
+	
+	ArrayList<Deck> decks;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		decks = new ArrayList<Deck>();
 		setContentView(R.layout.activity_main);
 	}
 
