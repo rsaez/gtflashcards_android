@@ -42,5 +42,9 @@ public class MainActivity extends Activity {
     	decks.add(deck);
     }
     
+    public void goToNewFlashcardActivity(View view) {
+    	Intent intent = new Intent(this, NewFlashcardActivity.class);
+    	startActivity(intent);
+    }
 
 }

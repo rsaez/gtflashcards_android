@@ -7,5 +7,6 @@
     <string name="login">Login</string>
     <string name="browse">Browse</string>
     <string name="login_heading"><b>Please login using your GA Tech credentials</b></string>
+    <string name="title_activity_new_flashcard">NewFlashcardActivity</string>
 
 </resources>
