@@ -32,5 +32,15 @@ public class MainActivity extends Activity {
     	Intent intent = new Intent(this, LoginActivity.class);
     	startActivity(intent);
     }
+    
+    public void createDeck() {
+    	int id = 1; //todo: use real id from server
+    	String name = "newDeck"; //todo: get name from input field on activity
+    	int flashcardCount = 0; //todo: get real count from server
+    	
+    	Deck deck = new Deck(id, name, flashcardCount);
+    	decks.add(deck);
+    }
+    
 
 }
