@@ -7,6 +7,8 @@
     <uses-sdk
         android:minSdkVersion="11"
         android:targetSdkVersion="18" />
+    
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
@@ -48,5 +50,8 @@
             android:label="@string/title_activity_new_deck" >
         </activity>
     </application>
+    
+    
+    
 
 </manifest>

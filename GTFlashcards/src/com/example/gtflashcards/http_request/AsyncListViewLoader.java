@@ -9,7 +9,8 @@ import java.util.List;
 
 import org.json.JSONArray;
 
-import edu.gatech.adapter.CustomAdapter;
+import com.example.gtflashcards.adapter.CustomAdapter;
+import com.example.gtflashcards.convertor.InputConvertor;
 
 import android.app.ProgressDialog;
 import android.content.Context;

@@ -1,5 +1,9 @@
 package com.example.gtflashcards;
 
+import java.util.ArrayList;
+
+import com.example.gtflashcards.convertor.ConvertorFactory;
+import com.example.gtflashcards.http_request.AsyncPOSTRequest;
 import com.example.gtflashcards.objects.Deck;
 
 import android.app.Activity;
@@ -30,13 +34,27 @@ public class NewDeckActivity extends Activity {
 		String deckName = ((EditText) findViewById(R.id.deck_name_input)).getText().toString();
 		if (deckName.length() > 0) {
 			System.out.println("DeckName="+deckName);
+			
+			// Frank added this piece
+			
+			ArrayList<String> datas = new ArrayList<String>();
+			datas.add(deckName);
+			
+			new AsyncPOSTRequest(NewDeckActivity.this, datas, ConvertorFactory.DECK_CONVERTOR())
+				.execute("http://dev.m.gatech.edu/d/he30/w/gtflashcards/c/api/create_deck");
+			
+			// Done Here
+			
+			/*
 			int id = -1; //todo: use real id from server
 	    
 			Deck deck = new Deck(id, deckName);
 			MainActivity.decks.add(deck);
+			*/
 			
 			Toast.makeText(NewDeckActivity.this, "Successfully created deck", Toast.LENGTH_SHORT).show();
 			super.finish();
+			
 		} else {
 			Toast.makeText(NewDeckActivity.this, "Plese enter a valid deck name", Toast.LENGTH_SHORT).show();			
 		}

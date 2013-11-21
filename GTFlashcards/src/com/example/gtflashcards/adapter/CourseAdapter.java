@@ -7,14 +7,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import edu.gatech.trylistview.Course;
-import edu.gatech.trylistview.R;
+import com.example.gtflashcards.objects.Course;
+import com.example.gtflashcards.R;
 
 public class CourseAdapter extends CustomAdapter<Course> {
     private List<Course> itemList;
     private Context context;
 
-    public CourseAdapter(List<Course> itemList, Context ctx) {
+    public CourseAdapter(List<com.example.gtflashcards.objects.Course> itemList, Context ctx) {
         super(ctx, android.R.layout.simple_list_item_1, itemList);
         this.itemList = itemList;
         this.context = ctx;        
@@ -48,7 +48,7 @@ public class CourseAdapter extends CustomAdapter<Course> {
         }
 
         Course c = itemList.get(position);
-        TextView text = (TextView) v.findViewById(R.id.textView1);
+        TextView text = (TextView) v.findViewById(R.id.courseRowTextView);
         text.setText(c.getCourse());
 
         return v;

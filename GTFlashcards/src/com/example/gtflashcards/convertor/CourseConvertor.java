@@ -3,7 +3,7 @@ package com.example.gtflashcards.convertor;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import edu.gatech.trylistview.Course;
+import com.example.gtflashcards.objects.Course;
 
 public class CourseConvertor implements InputConvertor<Course>{
 

@@ -24,12 +24,13 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int action_forgot_password=0x7f08001a;
-        public static final int action_settings=0x7f08001b;
+        public static final int action_forgot_password=0x7f08001b;
+        public static final int action_settings=0x7f08001c;
         public static final int answer_input=0x7f08000e;
         public static final int button1=0x7f08000a;
         public static final int button2=0x7f080009;
         public static final int checkBox1=0x7f080014;
+        public static final int courseRowTextView=0x7f08001a;
         public static final int course_input=0x7f080012;
         public static final int deck_detail=0x7f080019;
         public static final int deck_detail_container=0x7f080000;
@@ -78,6 +79,7 @@ public final class R {
         public static final int activity_new_flashcard=0x7f030006;
         public static final int deck=0x7f030007;
         public static final int fragment_flashcard_detail=0x7f030008;
+        public static final int row_course_layout=0x7f030009;
     }
     public static final class menu {
         public static final int login=0x7f070000;
