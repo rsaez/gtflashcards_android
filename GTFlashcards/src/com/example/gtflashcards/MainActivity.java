@@ -6,6 +6,7 @@ import com.example.gtflashcards.objects.Deck;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
@@ -31,8 +32,12 @@ public class MainActivity extends Activity {
 	/** Called when the user clicks the Login button */
     public void login(View view) {
         // Do something in response to button
-    	Intent intent = new Intent(this, LoginActivity.class);
-    	startActivity(intent);
+    	//Intent intent = new Intent(this, LoginActivity.class);
+    	//startActivity(intent);
+    	
+    	String url = "https://login.gatech.edu/cas/login";
+    	Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+		startActivity(myIntent);
     }
     
     public void goToNewFlashcardActivity(View view) {
