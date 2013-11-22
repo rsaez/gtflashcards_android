@@ -2,13 +2,15 @@ package com.example.gtflashcards.objects;
 
 import java.util.ArrayList;
 
-public class Flashcard {
+import android.app.Application;
+
+public class GTFlashcards extends Application{
 	int id, upvotes, downvotes;
 	String creator, question, answer, courseDept, courseCode;
 	ArrayList<String> tags;
 	boolean isPublic, isAnonymous, isKnown;
 	
-	public Flashcard(int id, String creator, String question, String answer, String courseDept, String courseCode, int upvotes, int downvotes, boolean isPublic, boolean isAnonymous) {
+	public GTFlashcards(int id, String creator, String question, String answer, String courseDept, String courseCode, int upvotes, int downvotes, boolean isPublic, boolean isAnonymous) {
 		this.id = id;
 		this.creator = creator;
 		this.question = question;

@@ -36,6 +36,7 @@ public class DeckListActivity extends ListActivity {
 	        	Intent intent = new Intent(getApplicationContext(), FlashcardListActivity.class);
 	        	
 	            //intent.putExtra("deck_name", inName);
+	        	
 	            
 	            startActivity(intent);
 	       }

@@ -3,7 +3,7 @@ package com.example.gtflashcards;
 import java.util.ArrayList;
 
 import com.example.gtflashcards.objects.Deck;
-import com.example.gtflashcards.objects.Flashcard;
+import com.example.gtflashcards.objects.GTFlashcards;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -15,7 +15,7 @@ import android.view.View;
 public class MainActivity extends Activity {
 	
 	static ArrayList<Deck> decks;
-	static ArrayList<Flashcard> fc;
+	static ArrayList<GTFlashcards> fc;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -27,20 +27,20 @@ public class MainActivity extends Activity {
 		decks.add(new Deck(0, "CS1332"));
 		
 		//dummy flashcards
-		fc = new ArrayList<Flashcard>();
+		fc = new ArrayList<GTFlashcards>();
 		
-		fc.add(new Flashcard(1, "rsaez", "Major carriers", "AT&T, T-MObile, Verizon, Sprint", "CS", "4261", 0, 0, true, false));
-		fc.add(new Flashcard(1, "rsaez", "Major mobile operating systems", "Android, IOS, Windows", "CS", "4261", 0, 0, true, false));
-		fc.add(new Flashcard(1, "rsaez", "What is JQuery", "Javascript library for implementing common functionality", "CS", "4261", 0, 0, true, false));
-		fc.add(new Flashcard(1, "rsaez", "Project development methods", "Agile, waterfall", "CS", "4261", 0, 0, true, false));
-		fc.add(new Flashcard(1, "rsaez", "Front-end web development laguages", "Javascript, HTML, CSS", "CS", "4261", 0, 0, true, false));
-		fc.add(new Flashcard(1, "rsaez", "Mobile device platforms", "Feature phones smart phones, tablets, e-readers, embedded devices, wearables", "CS", "4261", 0, 0, true, false));
-		fc.add(new Flashcard(1, "rsaez", "Mobile device constraints", "Screen size, battery life, touch interfaces", "CS", "4261", 0, 0, true, false));
+		fc.add(new GTFlashcards(1, "rsaez", "Major carriers", "AT&T, T-MObile, Verizon, Sprint", "CS", "4261", 0, 0, true, false));
+		fc.add(new GTFlashcards(1, "rsaez", "Major mobile operating systems", "Android, IOS, Windows", "CS", "4261", 0, 0, true, false));
+		fc.add(new GTFlashcards(1, "rsaez", "What is JQuery", "Javascript library for implementing common functionality", "CS", "4261", 0, 0, true, false));
+		fc.add(new GTFlashcards(1, "rsaez", "Project development methods", "Agile, waterfall", "CS", "4261", 0, 0, true, false));
+		fc.add(new GTFlashcards(1, "rsaez", "Front-end web development laguages", "Javascript, HTML, CSS", "CS", "4261", 0, 0, true, false));
+		fc.add(new GTFlashcards(1, "rsaez", "Mobile device platforms", "Feature phones smart phones, tablets, e-readers, embedded devices, wearables", "CS", "4261", 0, 0, true, false));
+		fc.add(new GTFlashcards(1, "rsaez", "Mobile device constraints", "Screen size, battery life, touch interfaces", "CS", "4261", 0, 0, true, false));
 		
-		fc.add(new Flashcard(1, "rsaez", "Big-o of insertion sort", "O(n^2)", "CS", "1332", 0, 0, true, false));
-		fc.add(new Flashcard(1, "rsaez", "What is in-place sorting", "when sorting doesnt need extra space", "CS", "1332", 0, 0, true, false));
-		fc.add(new Flashcard(1, "rsaez", "Set", "unordered collection of entities, dulicates not allowed", "CS", "1332", 0, 0, true, false));
-		fc.add(new Flashcard(1, "rsaez", "Bag", "unordered list, duplicates allowed", "CS", "1332", 0, 0, true, false));		
+		fc.add(new GTFlashcards(1, "rsaez", "Big-o of insertion sort", "O(n^2)", "CS", "1332", 0, 0, true, false));
+		fc.add(new GTFlashcards(1, "rsaez", "What is in-place sorting", "when sorting doesnt need extra space", "CS", "1332", 0, 0, true, false));
+		fc.add(new GTFlashcards(1, "rsaez", "Set", "unordered collection of entities, dulicates not allowed", "CS", "1332", 0, 0, true, false));
+		fc.add(new GTFlashcards(1, "rsaez", "Bag", "unordered list, duplicates allowed", "CS", "1332", 0, 0, true, false));		
 		setContentView(R.layout.activity_main);
 	}
 
@@ -86,5 +86,6 @@ public class MainActivity extends Activity {
     	}
     	return deckNames;
     }
+    
 
 }
