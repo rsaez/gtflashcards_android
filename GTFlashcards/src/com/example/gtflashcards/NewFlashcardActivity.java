@@ -3,6 +3,8 @@ package com.example.gtflashcards;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.example.gtflashcards.http_request.GTFlashcardsAPI;
+
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -58,7 +60,7 @@ public class NewFlashcardActivity extends Activity {
 		
 			int upvotes = 0;
 			int downvotes = 0;
-			boolean isPublic = false;
+			boolean isPrivate = false;
 			boolean isAnonymous = false;
 		
 		
@@ -68,6 +70,14 @@ public class NewFlashcardActivity extends Activity {
 			System.out.println("CourseDept="+courseDept);
 			System.out.println("CourseCode="+courseCode);
 			System.out.println("Deck="+deck);
+			
+			
+			// Frank added this API call
+			
+			GTFlashcardsAPI.addFlashcard(question, answer, courseDept, courseCode, isPrivate, isAnonymous);
+			
+			// End
+			
 			
 			
 			//Flashcard flashcard = new Flashcard(id, creator, question, answer, courseDept, courseCode, upvotes, downvotes, isPublic, isAnonymous);

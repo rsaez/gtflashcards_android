@@ -25,6 +25,38 @@ public class GTFlashcardsAPI {
 		});	
 	}
 	
+
+	public static void addFlashcard(String question, String answer, String course_dept, 
+									String course_code, boolean isPrivate, boolean isAnonymous) {
+		
+		RequestParams params = new RequestParams();
+		params.put("question", question);
+		params.put("answer", answer);
+		params.put("course_dept", course_dept);
+		params.put("course_code", course_code);
+		
+		if (isPrivate)
+			params.put("private", "1");
+		else
+			params.put("private", "0");
+
+		if (isAnonymous)
+			params.put("anonymous", "1");
+		else
+			params.put("anonymous", "0");
+		
+		
+		GTFlashcardsRestClient.post("flashcard", params, new AsyncHttpResponseHandler() {
+			
+			@Override
+			public void onSuccess(String response) {
+				Log.v("Rest Call", "addFlashcard " + response);
+			}
+			
+		});
+		
+	}
+	
 	
 	
 	
