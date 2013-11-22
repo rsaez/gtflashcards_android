@@ -19,7 +19,6 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		decks = new ArrayList<Deck>();
 		setContentView(R.layout.activity_main);
-		System.out.println("Derek is trying to push this change, got it");
 	}
 
 	@Override
