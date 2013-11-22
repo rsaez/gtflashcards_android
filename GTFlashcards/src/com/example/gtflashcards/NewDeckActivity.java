@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import com.example.gtflashcards.convertor.ConvertorFactory;
 import com.example.gtflashcards.http_request.AsyncPOSTRequest;
+import com.example.gtflashcards.http_request.GTFlashcardsAPI;
 import com.example.gtflashcards.objects.Deck;
 
 import android.app.Activity;
@@ -37,11 +38,7 @@ public class NewDeckActivity extends Activity {
 			
 			// Frank added this piece
 			
-			ArrayList<String> datas = new ArrayList<String>();
-			datas.add(deckName);
-			
-			new AsyncPOSTRequest(NewDeckActivity.this, datas, ConvertorFactory.DECK_CONVERTOR())
-				.execute("http://dev.m.gatech.edu/d/he30/w/gtflashcards/c/api/create_deck");
+			GTFlashcardsAPI.createDeck(deckName);
 			
 			// Done Here
 			
