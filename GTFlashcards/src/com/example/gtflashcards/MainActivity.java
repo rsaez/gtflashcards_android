@@ -24,6 +24,8 @@ public class MainActivity extends Activity {
 		decks.add(new Deck(0, "MATH 3215"));
 		decks.add(new Deck(0, "Deck 3"));
 		
+		//Where is my data
+		
 		setContentView(R.layout.activity_main);
 	}
 
