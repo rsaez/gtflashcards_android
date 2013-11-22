@@ -19,6 +19,11 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		decks = new ArrayList<Deck>();
+		//dummy data
+		decks.add(new Deck(0, "CS 4261"));
+		decks.add(new Deck(0, "MATH 3215"));
+		decks.add(new Deck(0, "Deck 3"));
+		
 		setContentView(R.layout.activity_main);
 	}
 
