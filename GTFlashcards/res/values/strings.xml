@@ -12,5 +12,8 @@
     <string name="title_flashcard_detail">Deck Detail</string>
     <string name="title_activity_new_deck">NewDeckActivity</string>
     <string name="title_activity_deck_list">My Decks</string>
-
+    <string name="title_activity_create_deck">Create Deck</string>
+    <string name="title_activity_create_flashcard">Create Flashcard</string>
+    <string name="title_activity_sample_deck">Sample Deck</string>
+    
 </resources>

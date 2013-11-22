@@ -10,40 +10,43 @@
     android:orientation="vertical" >
     
     <Button
+        android:id="@+id/login"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="@string/login"
         android:onClick="login" />
     <Button
+        android:id="@+id/my_decks"
 	    android:layout_width="fill_parent"
 	    android:layout_height="wrap_content"
-	    android:text="My Decks" 
+	    android:text="@string/title_activity_deck_list" 
 	    android:onClick="goToDeckListActivity" />
 	
 	<Button
+	    android:id="@+id/browse"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="@string/browse" />
 	
 	<Button
-	    android:id="@+id/button2"
+	    android:id="@+id/create_deck"
 	    android:layout_width="fill_parent"
 	    android:layout_height="wrap_content"
-	    android:text="Create Deck" 
+	    android:text="@string/title_activity_create_deck" 
 	    android:onClick="goToNewDeckActivity" />
 	
 	<Button
-	    android:id="@+id/button1"
+	    android:id="@+id/create_flashcard"
 	    android:layout_width="fill_parent"
 	    android:layout_height="wrap_content"
-	    android:text="Create Flashcard" 
-	    android:onClick="goToNewFlashcardActivity" />
+	    android:onClick="goToNewFlashcardActivity"
+	    android:text="@string/title_activity_create_flashcard" />
 
 	<Button
+	    android:id="@+id/sample_deck"
 	    android:layout_width="fill_parent"
 	    android:layout_height="wrap_content"
-	    android:text="Sample Deck" 
+	    android:text="@string/title_activity_sample_deck" 
 	    android:onClick="goToFlashcardListActivity" />
-	
 	
 </LinearLayout>

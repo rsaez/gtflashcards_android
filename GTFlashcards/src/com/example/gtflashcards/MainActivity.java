@@ -24,7 +24,7 @@ public class MainActivity extends Activity {
 		//dummy data
 		decks.add(new Deck(0, "CS 4261"));
 		decks.add(new Deck(0, "MATH 3215"));
-		decks.add(new Deck(0, "Deck 3"));
+		decks.add(new Deck(0, "CS1332"));
 		
 		//dummy flashcards
 		fc = new ArrayList<Flashcard>();
