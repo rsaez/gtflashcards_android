@@ -40,7 +40,9 @@ public class MainActivity extends Activity {
 		fc.add(new GTFlashcards(1, "rsaez", "Big-o of insertion sort", "O(n^2)", "CS", "1332", 0, 0, true, false));
 		fc.add(new GTFlashcards(1, "rsaez", "What is in-place sorting", "when sorting doesnt need extra space", "CS", "1332", 0, 0, true, false));
 		fc.add(new GTFlashcards(1, "rsaez", "Set", "unordered collection of entities, dulicates not allowed", "CS", "1332", 0, 0, true, false));
-		fc.add(new GTFlashcards(1, "rsaez", "Bag", "unordered list, duplicates allowed", "CS", "1332", 0, 0, true, false));		
+		fc.add(new GTFlashcards(1, "rsaez", "Bag", "unordered list, duplicates allowed", "CS", "1332", 0, 0, true, false));
+		
+		
 		setContentView(R.layout.activity_main);
 	}
 
@@ -87,5 +89,12 @@ public class MainActivity extends Activity {
     	return deckNames;
     }
     
+    public static ArrayList<String> getFcNames() {
+    	ArrayList<String> fcNames = new ArrayList<String>(); 
+    	for (GTFlashcards flashcard : fc) {
+    		fcNames.add(flashcard.getQuestion());
+    	}
+    	return fcNames;
+    }
 
 }
