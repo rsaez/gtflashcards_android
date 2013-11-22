@@ -24,20 +24,19 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int action_forgot_password=0x7f08001a;
-        public static final int action_settings=0x7f08001b;
+        public static final int action_forgot_password=0x7f080019;
+        public static final int action_settings=0x7f08001a;
         public static final int answer_input=0x7f08000e;
         public static final int button1=0x7f08000a;
         public static final int button2=0x7f080009;
         public static final int checkBox1=0x7f080014;
         public static final int course_input=0x7f080012;
-        public static final int deck_detail=0x7f080019;
+        public static final int deck_detail=0x7f080018;
         public static final int deck_detail_container=0x7f080000;
         public static final int deck_list=0x7f080001;
         public static final int deck_name_input=0x7f08000c;
         public static final int deck_spinner=0x7f080016;
         public static final int email=0x7f080005;
-        public static final int listView1=0x7f080018;
         public static final int login=0x7f080007;
         public static final int login_form=0x7f080004;
         public static final int login_status=0x7f080002;
@@ -54,7 +53,8 @@ public final class R {
         public static final int textView5=0x7f080017;
     }
     public static final class layout {
-        public static final int activity_flashcard_detail=0x7f030000;
+        public static final int activity_deck_list=0x7f030000;
+        public static final int activity_flashcard_detail=0x7f030001;
         /** 
     Layout alias to replace the single-pane version of the layout with a
     two-pane version on Large screens.
@@ -70,13 +70,12 @@ public final class R {
     http://developer.android.com/training/multiscreen/screensizes.html#TaskUseAliasFilters
     
          */
-        public static final int activity_flashcard_list=0x7f030001;
-        public static final int activity_flashcard_twopane=0x7f030002;
-        public static final int activity_login=0x7f030003;
-        public static final int activity_main=0x7f030004;
-        public static final int activity_new_deck=0x7f030005;
-        public static final int activity_new_flashcard=0x7f030006;
-        public static final int deck=0x7f030007;
+        public static final int activity_flashcard_list=0x7f030002;
+        public static final int activity_flashcard_twopane=0x7f030003;
+        public static final int activity_login=0x7f030004;
+        public static final int activity_main=0x7f030005;
+        public static final int activity_new_deck=0x7f030006;
+        public static final int activity_new_flashcard=0x7f030007;
         public static final int fragment_flashcard_detail=0x7f030008;
     }
     public static final class menu {
@@ -86,29 +85,30 @@ public final class R {
         public static final int new_flashcard=0x7f070003;
     }
     public static final class string {
-        public static final int action_forgot_password=0x7f05000f;
+        public static final int action_forgot_password=0x7f050010;
         public static final int action_settings=0x7f050001;
-        public static final int action_sign_in_register=0x7f05000d;
-        public static final int action_sign_in_short=0x7f05000e;
+        public static final int action_sign_in_register=0x7f05000e;
+        public static final int action_sign_in_short=0x7f05000f;
         public static final int app_name=0x7f050000;
         public static final int browse=0x7f050004;
-        public static final int error_field_required=0x7f050014;
-        public static final int error_incorrect_password=0x7f050013;
-        public static final int error_invalid_email=0x7f050011;
-        public static final int error_invalid_password=0x7f050012;
+        public static final int error_field_required=0x7f050015;
+        public static final int error_incorrect_password=0x7f050014;
+        public static final int error_invalid_email=0x7f050012;
+        public static final int error_invalid_password=0x7f050013;
         public static final int hello_world=0x7f050002;
         public static final int login=0x7f050003;
         public static final int login_heading=0x7f050005;
-        public static final int login_progress_signing_in=0x7f050010;
+        public static final int login_progress_signing_in=0x7f050011;
         /**  Strings related to login 
          */
-        public static final int prompt_email=0x7f05000b;
-        public static final int prompt_password=0x7f05000c;
-        public static final int title_activity_login=0x7f05000a;
+        public static final int prompt_email=0x7f05000c;
+        public static final int prompt_password=0x7f05000d;
+        public static final int title_activity_deck_list=0x7f05000a;
+        public static final int title_activity_login=0x7f05000b;
         public static final int title_activity_new_deck=0x7f050009;
         public static final int title_activity_new_flashcard=0x7f050006;
-        public static final int title_deck_detail=0x7f050008;
-        public static final int title_deck_list=0x7f050007;
+        public static final int title_flashcard_detail=0x7f050008;
+        public static final int title_flashcard_list=0x7f050007;
     }
     public static final class style {
         /** 

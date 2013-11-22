@@ -14,11 +14,16 @@
         android:layout_height="wrap_content"
         android:text="@string/login"
         android:onClick="login" />
+    <Button
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:text="My Decks" 
+	    android:onClick="goToDeckListActivity" />
+	
 	<Button
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="@string/browse"
-        android:onClick="" />
+        android:text="@string/browse" />
 	
 	<Button
 	    android:id="@+id/button2"
@@ -35,10 +40,10 @@
 	    android:onClick="goToNewFlashcardActivity" />
 
 	<Button
-	    android:id="@+id/button2"
 	    android:layout_width="fill_parent"
 	    android:layout_height="wrap_content"
 	    android:text="Sample Deck" 
-	    android:onClick="goToMyDecksActivity" />
-
+	    android:onClick="goToFlashcardListActivity" />
+	
+	
 </LinearLayout>

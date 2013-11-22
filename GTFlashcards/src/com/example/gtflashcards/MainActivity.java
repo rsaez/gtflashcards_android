@@ -32,12 +32,14 @@ public class MainActivity extends Activity {
 	/** Called when the user clicks the Login button */
     public void login(View view) {
         // Do something in response to button
-    	//Intent intent = new Intent(this, LoginActivity.class);
-    	//startActivity(intent);
-    	
     	String url = "https://login.gatech.edu/cas/login";
     	Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
 		startActivity(myIntent);
+    }
+    
+    public void goToDeckListActivity(View view) {
+    	Intent intent = new Intent(this, DeckListActivity.class);
+    	startActivity(intent);
     }
     
     public void goToNewFlashcardActivity(View view) {
@@ -45,7 +47,7 @@ public class MainActivity extends Activity {
     	startActivity(intent);
     }
     
-    public void goToMyDecksActivity(View view) {
+    public void goToFlashcardListActivity(View view) {
     	Intent intent = new Intent(this, FlashcardListActivity.class);
     	startActivity(intent);
     }

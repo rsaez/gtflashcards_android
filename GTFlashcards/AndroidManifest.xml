@@ -33,11 +33,11 @@
         </activity>
         <activity
             android:name="com.example.gtflashcards.FlashcardListActivity"
-            android:label="@string/title_deck_list" >
+            android:label="@string/title_flashcard_list" >
         </activity>
         <activity
             android:name="com.example.gtflashcards.FlashcardDetailActivity"
-            android:label="@string/title_deck_detail"
+            android:label="@string/title_flashcard_detail"
             android:parentActivityName=".FlashcardListActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -46,6 +46,10 @@
         <activity
             android:name="com.example.gtflashcards.NewDeckActivity"
             android:label="@string/title_activity_new_deck" >
+        </activity>
+        <activity
+            android:name="com.example.gtflashcards.DeckListActivity"
+            android:label="@string/title_activity_deck_list" >
         </activity>
     </application>
 
