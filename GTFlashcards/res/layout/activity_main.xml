@@ -21,39 +21,12 @@
 	    android:layout_height="wrap_content"
 	    android:text="@string/title_activity_deck_list" 
 	    android:onClick="goToDeckListActivity" />
-	
-	<Button
-	    android:id="@+id/browse"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/browse" />
-	
-	<Button
-	    android:id="@+id/create_deck"
-	    android:layout_width="fill_parent"
-	    android:layout_height="wrap_content"
-	    android:text="@string/title_activity_create_deck" 
-	    android:onClick="goToNewDeckActivity" />
-	
-	<Button
-	    android:id="@+id/create_flashcard"
-	    android:layout_width="fill_parent"
-	    android:layout_height="wrap_content"
-	    android:onClick="goToNewFlashcardActivity"
-	    android:text="@string/title_activity_create_flashcard" />
 
-	<Button
-	    android:id="@+id/sample_deck"
-	    android:layout_width="fill_parent"
-	    android:layout_height="wrap_content"
-	    android:text="@string/title_activity_sample_deck" 
-	    android:onClick="goToFlashcardListActivity" />
-	
 	<Button
 	    android:id="@+id/browseCloudActivity"
 	    android:layout_width="fill_parent"
 	    android:layout_height="wrap_content"
-	    android:text="Browse Cloud" 
-	    android:onClick="goToCloudActivity" />
+	    android:onClick="goToCloudActivity"
+	    android:text="Browse Cloud" />
 	
 </LinearLayout>

@@ -2,15 +2,16 @@ package com.example.gtflashcards;
 
 import java.util.ArrayList;
 
-import com.example.gtflashcards.objects.Deck;
-import com.example.gtflashcards.objects.GTFlashcards;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
+
+import com.example.gtflashcards.objects.Deck;
+import com.example.gtflashcards.objects.GTFlashcards;
 
 public class MainActivity extends Activity {
 	
@@ -52,6 +53,21 @@ public class MainActivity extends Activity {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
+	}
+	
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+	    // Handle item selection
+	    switch (item.getItemId()) {
+	        case R.id.new_deck:
+	        	goToNewDeckActivity(null);
+	            return true;
+	        case R.id.new_flashcard:
+	        	goToNewFlashcardActivity(null);
+	            return true;
+	        default:
+	            return super.onOptionsItemSelected(item);
+	    }
 	}
 	
 	/** Called when the user clicks the Login button */

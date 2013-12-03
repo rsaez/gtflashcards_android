@@ -20,10 +20,10 @@ public class NewFlashcardActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_new_flashcard);
-		
+
 		addItemsToDeckSpinner();
 	}
-	
+
 	public void addItemsToDeckSpinner() {
 		deckSpinner = (Spinner) findViewById(R.id.deck_spinner);
 		ArrayList<String> deckNames = MainActivity.getDeckNames();

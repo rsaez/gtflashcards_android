@@ -33,7 +33,11 @@
         </activity>
         <activity
             android:name="com.example.gtflashcards.FlashcardListActivity"
-            android:label="@string/title_flashcard_list" >
+            android:label="@string/title_flashcard_list"
+            android:parentActivityName="com.example.gtflashcards.DeckListActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.gtflashcards.DeckListActivity" />
         </activity>
         <activity
             android:name="com.example.gtflashcards.FlashcardDetailActivity"
@@ -49,11 +53,19 @@
         </activity>
         <activity
             android:name="com.example.gtflashcards.DeckListActivity"
-            android:label="@string/title_activity_deck_list" >
+            android:label="@string/title_activity_deck_list"
+            android:parentActivityName="com.example.gtflashcards.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.gtflashcards.MainActivity" />
         </activity>
         <activity
             android:name="com.example.gtflashcards.CloudActivity"
-            android:label="@string/title_activity_cloud" >
+            android:label="@string/title_activity_cloud"
+            android:parentActivityName="com.example.gtflashcards.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.gtflashcards.MainActivity" />
         </activity>
         <activity
             android:name="com.example.gtflashcards.CourseDeptListActivity"

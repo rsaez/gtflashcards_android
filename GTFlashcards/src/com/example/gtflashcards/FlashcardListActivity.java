@@ -3,6 +3,10 @@ package com.example.gtflashcards;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.NavUtils;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
 
 /**
  * An activity representing a list of Decks. This activity has different
@@ -32,7 +36,8 @@ public class FlashcardListActivity extends FragmentActivity implements
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_flashcard_list);
-
+		setupActionBar();
+		
 		if (findViewById(R.id.deck_detail_container) != null) {
 			// The detail container view will be present only in the
 			// large-screen layouts (res/values-large and
@@ -47,6 +52,62 @@ public class FlashcardListActivity extends FragmentActivity implements
 		}
 
 		// TODO: If exposing deep links into your app, handle intents here.
+	}
+	
+	/**
+	 * Set up the {@link android.app.ActionBar}.
+	 */
+	private void setupActionBar() {
+
+		getActionBar().setDisplayHomeAsUpEnabled(true);
+
+	}
+	
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.flashcard_list, menu);
+		return true;
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()) {
+			case android.R.id.home:
+				NavUtils.navigateUpFromSameTask(this);
+				return true;
+			case R.id.shuffle_option:
+	        	shuffle();
+	            return true;
+			case R.id.rename_option:
+	        	renameDeck();
+	            return true;
+	        case R.id.delete_option:
+	        	deleteDeck();
+	            return true;
+	        case R.id.new_flashcard:
+	        	goToNewFlashcardActivity(null);
+	            return true;
+	        
+		}
+		return super.onOptionsItemSelected(item);
+	}
+	
+	public void goToNewFlashcardActivity(View view) {
+    	Intent intent = new Intent(this, NewFlashcardActivity.class);
+    	startActivity(intent);
+    }
+    
+	void shuffle() {
+		//todo: implement shuffle
+	}
+	
+	void renameDeck() {
+		//todo: implement rename deck
+	}
+
+	void deleteDeck() {
+		//todo: implement delete deck
 	}
 
 	/**

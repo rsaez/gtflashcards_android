@@ -16,6 +16,7 @@ public class NewDeckActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_new_deck);
 	}
+	
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
