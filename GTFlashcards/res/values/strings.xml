@@ -17,5 +17,6 @@
     <string name="title_activity_sample_deck">Sample Deck</string>
     <string name="title_activity_cloud">CloudActivity</string>
     <string name="title_activity_course_dept_list">CourseDeptListActivity</string>
+    <string name="title_activity_course_code_list">CourseCodeListActivity</string>
 
 </resources>

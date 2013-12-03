@@ -111,6 +111,7 @@ public class MainActivity extends Activity {
     }
     
     public static void downloadCourseDeptsFromServer() {
+    	//todo: download course codes from server here
     	courseDepts = new ArrayList<String>();
     	courseDepts.add("CS");
     	courseDepts.add("MATH");

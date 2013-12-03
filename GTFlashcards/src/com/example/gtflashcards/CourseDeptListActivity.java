@@ -32,9 +32,9 @@ public class CourseDeptListActivity extends ListActivity {
 	        public void onItemClick(AdapterView<?> parent, View view, int position, long id){
 	        	Object ob = listview.getItemAtPosition(position);
 	        	
-	        	//Intent intent = new Intent(getApplicationContext(), FlashcardListActivity.class);
-	            //intent.putExtra("deck_name", inName);
-	            //startActivity(intent);
+	        	Intent intent = new Intent(getApplicationContext(), CourseCodeListActivity.class);
+	            intent.putExtra("courseDept", ob.toString());
+	            startActivity(intent);
 	       }
 		});
 	}

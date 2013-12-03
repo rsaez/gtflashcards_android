@@ -63,6 +63,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.gtflashcards.CloudActivity" />
         </activity>
+        <activity
+            android:name="com.example.gtflashcards.CourseCodeListActivity"
+            android:label="@string/title_activity_course_code_list"
+            android:parentActivityName="com.example.gtflashcards.CourseDeptListActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.gtflashcards.CourseDeptListActivity" />
+        </activity>
     </application>
 
 </manifest>

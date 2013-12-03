@@ -1,8 +1,8 @@
-
 package com.example.gtflashcards;
 
+import java.util.ArrayList;
+
 import android.app.ListActivity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
 import android.view.Menu;
@@ -13,22 +13,22 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import com.example.gtflashcards.objects.Deck;
+public class CourseCodeListActivity extends ListActivity {
 
-public class DeckListActivity extends ListActivity {
-	
-	Deck deck;
 	ListView listview;
+	String courseDept;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_deck_list);
+		setContentView(R.layout.activity_course_code_list);
+		// Show the Up button in the action bar.
 		setupActionBar();
 		
+		courseDept = "CS"; //todo: get real courseDept passed in from the course dept page
+		
 		setListAdapter(new ArrayAdapter<String>(this,
-				android.R.layout.simple_list_item_1, MainActivity.getDeckNames()));
+				android.R.layout.simple_list_item_1, getCourseCodes()));
 		
 		listview = getListView();
 		listview.setOnItemClickListener(new OnItemClickListener(){
@@ -36,18 +36,22 @@ public class DeckListActivity extends ListActivity {
 	        public void onItemClick(AdapterView<?> parent, View view, int position, long id){
 	        	Object ob = listview.getItemAtPosition(position);
 	        	
-	        	
-	        	Intent intent = new Intent(getApplicationContext(), FlashcardListActivity.class);
-	        	
+	        	//Intent intent = new Intent(getApplicationContext(), FlashcardListActivity.class);
 	            //intent.putExtra("deck_name", inName);
-	        	
-	            
-	            startActivity(intent);
+	            //startActivity(intent);
 	       }
 		});
-		
 	}
 	
+	private ArrayList<String> getCourseCodes() {
+		//todo: get real course codes
+		ArrayList<String> courseCodes = new ArrayList<String>();
+		courseCodes.add(courseDept + " 1331");
+		courseCodes.add(courseDept + " 2340");
+		courseCodes.add(courseDept + " 4261");
+		return courseCodes;
+	}
+
 	/**
 	 * Set up the {@link android.app.ActionBar}.
 	 */
@@ -56,7 +60,7 @@ public class DeckListActivity extends ListActivity {
 		getActionBar().setDisplayHomeAsUpEnabled(true);
 
 	}
-	
+
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
@@ -81,5 +85,4 @@ public class DeckListActivity extends ListActivity {
 		return super.onOptionsItemSelected(item);
 	}
 
-	
 }
