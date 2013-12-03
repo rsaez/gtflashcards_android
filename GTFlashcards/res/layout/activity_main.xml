@@ -49,4 +49,11 @@
 	    android:text="@string/title_activity_sample_deck" 
 	    android:onClick="goToFlashcardListActivity" />
 	
+	<Button
+	    android:id="@+id/browseCloudActivity"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:text="Browse Cloud" 
+	    android:onClick="goToCloudActivity" />
+	
 </LinearLayout>

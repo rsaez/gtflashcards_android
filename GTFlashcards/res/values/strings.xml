@@ -15,5 +15,7 @@
     <string name="title_activity_create_deck">Create Deck</string>
     <string name="title_activity_create_flashcard">Create Flashcard</string>
     <string name="title_activity_sample_deck">Sample Deck</string>
-    
+    <string name="title_activity_cloud">CloudActivity</string>
+    <string name="title_activity_course_dept_list">CourseDeptListActivity</string>
+
 </resources>

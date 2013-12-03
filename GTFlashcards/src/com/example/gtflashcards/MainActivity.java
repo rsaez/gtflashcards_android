@@ -14,8 +14,9 @@ import android.view.View;
 
 public class MainActivity extends Activity {
 	
-	static ArrayList<Deck> decks;
-	static ArrayList<GTFlashcards> fc;
+	static ArrayList<Deck> decks = null;
+	static ArrayList<GTFlashcards> fc = null;
+	static ArrayList<String> courseDepts = null;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -81,6 +82,11 @@ public class MainActivity extends Activity {
     	startActivity(intent);
     }
     
+    public void goToCloudActivity(View view) {
+    	Intent intent = new Intent(this, CloudActivity.class);
+    	startActivity(intent);
+    }
+    
     public static ArrayList<String> getDeckNames() {
     	ArrayList<String> deckNames = new ArrayList<String>(); 
     	for (Deck deck : decks) {
@@ -95,6 +101,20 @@ public class MainActivity extends Activity {
     		fcNames.add(flashcard.getQuestion());
     	}
     	return fcNames;
+    }
+    
+    public static ArrayList<String> getCourseDepts() {
+    	if (courseDepts == null) {
+    		downloadCourseDeptsFromServer();
+    	}
+    	return courseDepts;
+    }
+    
+    public static void downloadCourseDeptsFromServer() {
+    	courseDepts = new ArrayList<String>();
+    	courseDepts.add("CS");
+    	courseDepts.add("MATH");
+    	courseDepts.add("ECE");
     }
 
 }

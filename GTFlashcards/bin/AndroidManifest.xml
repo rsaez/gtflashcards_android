@@ -7,8 +7,6 @@
     <uses-sdk
         android:minSdkVersion="11"
         android:targetSdkVersion="18" />
-    
-    
 
     <application
         android:allowBackup="true"
@@ -52,6 +50,18 @@
         <activity
             android:name="com.example.gtflashcards.DeckListActivity"
             android:label="@string/title_activity_deck_list" >
+        </activity>
+        <activity
+            android:name="com.example.gtflashcards.CloudActivity"
+            android:label="@string/title_activity_cloud" >
+        </activity>
+        <activity
+            android:name="com.example.gtflashcards.CourseDeptListActivity"
+            android:label="@string/title_activity_course_dept_list"
+            android:parentActivityName="com.example.gtflashcards.CloudActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.gtflashcards.CloudActivity" />
         </activity>
     </application>
 
