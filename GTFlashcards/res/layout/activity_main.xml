@@ -10,28 +10,23 @@
     android:orientation="vertical" >
     
     <Button
+        android:id="@+id/login"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="@string/login"
         android:onClick="login" />
-	<Button
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/browse"
-        android:onClick="" />
-
-	<Button
-	    android:id="@+id/button1"
+    <Button
+        android:id="@+id/my_decks"
 	    android:layout_width="fill_parent"
 	    android:layout_height="wrap_content"
-	    android:text="New Flashcard" 
-	    android:onClick="goToNewFlashcardActivity" />
+	    android:text="@string/title_activity_deck_list" 
+	    android:onClick="goToDeckListActivity" />
 
 	<Button
-	    android:id="@+id/button2"
+	    android:id="@+id/browseCloudActivity"
 	    android:layout_width="fill_parent"
 	    android:layout_height="wrap_content"
-	    android:text="Sample Deck" 
-	    android:onClick="goToMyDecksActivity" />
-
+	    android:onClick="goToCloudActivity"
+	    android:text="Browse Cloud" />
+	
 </LinearLayout>

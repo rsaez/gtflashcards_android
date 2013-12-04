@@ -5,10 +5,24 @@
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
     <string name="login">Login</string>
+    <string name="logout">Logout</string>
     <string name="browse">Browse</string>
     <string name="login_heading"><b>Please login using your GA Tech credentials</b></string>
-    <string name="title_activity_new_flashcard">NewFlashcardActivity</string>
-    <string name="title_deck_list">Decks</string>
-    <string name="title_deck_detail">Deck Detail</string>
-
+    <string name="title_activity_new_flashcard">New Flashcard</string>
+    <string name="title_flashcard_list">Deck Page</string>
+    <string name="title_flashcard_detail">Deck Detail</string>
+    <string name="title_activity_new_deck">New Deck</string>
+    <string name="title_activity_deck_list">My Decks</string>
+    <string name="title_activity_create_deck">Create Deck</string>
+    <string name="title_activity_create_flashcard">Create Flashcard</string>
+    <string name="title_activity_sample_deck">Sample Deck</string>
+    <string name="title_activity_cloud">Browse Cloud</string>
+    <string name="title_activity_course_dept_list">Course Dept</string>
+    <string name="title_activity_course_code_list">Course Code</string>
+    <string name="new_deck">New Deck</string>
+    <string name="new_flashcard">New Flashcard</string>
+    <string name="my_decks">My Decks</string>
+    <string name="browse_cloud">Browse Cloud</string>
+	<string name="delete">Delete</string>
+	
 </resources>

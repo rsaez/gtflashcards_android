@@ -6,17 +6,29 @@ import java.util.ArrayList;
 public class Deck {
 	int id, flashcardCount;
 	String name;
-	ArrayList<Flashcard> flashcards;
+	ArrayList<GTFlashcards> flashcards;
 	
-	public Deck(int id, String name, int flashcardCount) {
+	public Deck(int id, String name) {
 		this.id = id;
 		this.name = name;
-		this.flashcardCount = flashcardCount;
+		this.flashcardCount = 0;
 		
-		flashcards = new ArrayList<Flashcard>();
+		flashcards = new ArrayList<GTFlashcards>();
 	}
 	
-	public void addFlashcard(Flashcard flashcard) {
+	public ArrayList<GTFlashcards> getFlashcards() {
+		return flashcards;
+	}
+
+	public void setFlashcards(ArrayList<GTFlashcards> flashcards) {
+		this.flashcards = flashcards;
+	}
+
+	public void addFlashcard(GTFlashcards flashcard) {
 		flashcards.add(flashcard);
+	}
+	
+	public String getName() {
+		return name;
 	}
 }

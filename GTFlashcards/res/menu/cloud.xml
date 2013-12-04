@@ -1,0 +1,8 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+	<item
+        android:id="@+id/my_decks_option"
+        android:showAsAction="always"
+        android:title="@string/my_decks" />
+    
+</menu>
