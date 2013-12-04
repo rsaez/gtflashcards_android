@@ -9,11 +9,15 @@ package com.example.gtflashcards;
 
 public final class R {
     public static final class anim {
-        public static final int left_to_right=0x7f040000;
-        public static final int slide_in_left=0x7f040001;
-        public static final int slide_in_right=0x7f040002;
-        public static final int slide_out_left=0x7f040003;
-        public static final int slide_out_right=0x7f040004;
+        public static final int card_flip_left_in=0x7f040000;
+        public static final int card_flip_left_out=0x7f040001;
+        public static final int card_flip_right_in=0x7f040002;
+        public static final int card_flip_right_out=0x7f040003;
+        public static final int left_to_right=0x7f040004;
+        public static final int slide_in_left=0x7f040005;
+        public static final int slide_in_right=0x7f040006;
+        public static final int slide_out_left=0x7f040007;
+        public static final int slide_out_right=0x7f040008;
     }
     public static final class attr {
     }
@@ -31,20 +35,22 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int action_forgot_password=0x7f090023;
-        public static final int action_settings=0x7f09001e;
+        public static final int action_forgot_password=0x7f090025;
+        public static final int action_settings=0x7f090020;
+        public static final int answer=0x7f09001a;
         public static final int answer_input=0x7f090010;
         public static final int browseByCourseButton=0x7f090000;
         public static final int browseByTagButton=0x7f090001;
         public static final int browseCloudActivity=0x7f09000b;
         public static final int checkBox1=0x7f090016;
-        public static final int cloud_option=0x7f09001b;
+        public static final int cloud_option=0x7f09001d;
+        public static final int container=0x7f090002;
         public static final int course_input=0x7f090014;
         public static final int create_flashcard=0x7f09000d;
         public static final int deck_name_input=0x7f09000e;
         public static final int deck_spinner=0x7f090018;
-        public static final int delete_option=0x7f090020;
-        public static final int edit_option=0x7f09001f;
+        public static final int delete_option=0x7f090022;
+        public static final int edit_option=0x7f090021;
         public static final int email=0x7f090006;
         public static final int login=0x7f090008;
         public static final int login_form=0x7f090005;
@@ -52,14 +58,14 @@ public final class R {
         public static final int login_status_message=0x7f090004;
         public static final int make_public_checkbox=0x7f090017;
         public static final int my_decks=0x7f09000a;
-        public static final int my_decks_option=0x7f09001a;
-        public static final int new_deck=0x7f09001c;
-        public static final int new_flashcard=0x7f09001d;
+        public static final int my_decks_option=0x7f09001c;
+        public static final int new_deck=0x7f09001e;
+        public static final int new_flashcard=0x7f09001f;
         public static final int password=0x7f090007;
-        public static final int question=0x7f090002;
+        public static final int question=0x7f09001b;
         public static final int question_input=0x7f09000f;
-        public static final int rename_option=0x7f090022;
-        public static final int shuffle_option=0x7f090021;
+        public static final int rename_option=0x7f090024;
+        public static final int shuffle_option=0x7f090023;
         public static final int sign_in_button=0x7f090009;
         public static final int tags_input=0x7f090011;
         public static final int textView1=0x7f09000c;
@@ -79,6 +85,8 @@ public final class R {
         public static final int activity_main=0x7f030007;
         public static final int activity_new_deck=0x7f030008;
         public static final int activity_new_flashcard=0x7f030009;
+        public static final int fragment_flashcard_back=0x7f03000a;
+        public static final int fragment_flashcard_front=0x7f03000b;
     }
     public static final class menu {
         public static final int cloud=0x7f080000;

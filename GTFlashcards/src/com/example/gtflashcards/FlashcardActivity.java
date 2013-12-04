@@ -1,20 +1,25 @@
 package com.example.gtflashcards;
 
+import com.example.gtflashcards.objects.GTFlashcards;
+
+import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
 import android.view.GestureDetector;
 import android.view.GestureDetector.SimpleOnGestureListener;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.View.OnClickListener;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.gtflashcards.objects.GTFlashcards;
 
 public class FlashcardActivity extends Activity implements OnClickListener {
 
@@ -25,6 +30,44 @@ public class FlashcardActivity extends Activity implements OnClickListener {
     View.OnTouchListener gestureListener;
     
     GTFlashcards flashcard;
+    
+private boolean mShowingBack = false;
+    
+	/**
+     * A fragment representing the front of the card.
+     */
+	@SuppressLint("ValidFragment")
+	public class CardFrontFragment extends Fragment {
+        @Override
+        public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                Bundle savedInstanceState) {
+            
+        	View view = inflater.inflate(R.layout.fragment_flashcard_front, container, false);
+
+        	TextView t=(TextView)view.findViewById(R.id.question); 
+            t.setText(flashcard.getQuestion());
+          
+            return view;
+        }
+    }
+
+    /**
+     * A fragment representing the back of the card.
+     */
+	@SuppressLint("ValidFragment")
+	public class CardBackFragment extends Fragment {
+        @Override
+        public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                Bundle savedInstanceState) {
+        	
+        	View view = inflater.inflate(R.layout.fragment_flashcard_back, container, false);
+
+        	TextView t=(TextView)view.findViewById(R.id.answer); 
+            t.setText(flashcard.getAnswer());
+          
+            return view;
+        }
+    }
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +75,14 @@ public class FlashcardActivity extends Activity implements OnClickListener {
 		setContentView(R.layout.activity_flashcard);
 		// Show the Up button in the action bar.
 		setupActionBar();
+		
+		if (savedInstanceState == null) {
+            getFragmentManager()
+                    .beginTransaction()
+                    .add(R.id.container, new CardFrontFragment())
+                    .commit();
+        }
+		
 		
 		// Gesture detection
         gestureDetector = new GestureDetector(this, new MyGestureDetector());
@@ -47,11 +98,46 @@ public class FlashcardActivity extends Activity implements OnClickListener {
         
         flashcard = MainActivity.getCurrentFlashcard();
         
-        TextView t=(TextView)findViewById(R.id.question); 
-        t.setText(flashcard.getQuestion());
+        
         
 	}
 
+	private void flipCard() {
+	    if (mShowingBack) {
+	        getFragmentManager().popBackStack();
+	        return;
+	    }
+
+	    // Flip to the back.
+
+	    mShowingBack = true;
+
+	    // Create and commit a new fragment transaction that adds the fragment for the back of
+	    // the card, uses custom animations, and is part of the fragment manager's back stack.
+
+	    getFragmentManager()
+	            .beginTransaction()
+
+	            // Replace the default fragment animations with animator resources representing
+	            // rotations when switching to the back of the card, as well as animator
+	            // resources representing rotations when flipping back to the front (e.g. when
+	            // the system Back button is pressed).
+	            .setCustomAnimations(
+	                    R.anim.card_flip_right_in, R.anim.card_flip_right_out,
+	                    R.anim.card_flip_left_in, R.anim.card_flip_left_out)
+
+	            // Replace any fragments currently in the container view with a fragment
+	            // representing the next page (indicated by the just-incremented currentPage
+	            // variable).
+	            .replace(R.id.container, new CardBackFragment())
+
+	            // Add this transaction to the back stack, allowing users to press Back
+	            // to get to the front of the card.
+	            .addToBackStack(null)
+
+	            // Commit the transaction.
+	            .commit();
+	}
 	/**
 	 * Set up the {@link android.app.ActionBar}.
 	 */
@@ -137,6 +223,12 @@ public class FlashcardActivity extends Activity implements OnClickListener {
         @Override
         public boolean onDown(MotionEvent e) {
         	return true;
+        }
+        
+        @Override
+        public boolean onSingleTapUp(MotionEvent e) {
+        	flipCard();
+            return true;
         }
 
     }
