@@ -32,22 +32,6 @@
             android:label="@string/title_activity_new_flashcard" >
         </activity>
         <activity
-            android:name="com.example.gtflashcards.FlashcardListActivity"
-            android:label="@string/title_flashcard_list"
-            android:parentActivityName="com.example.gtflashcards.DeckListActivity" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.gtflashcards.DeckListActivity" />
-        </activity>
-        <activity
-            android:name="com.example.gtflashcards.FlashcardDetailActivity"
-            android:label="@string/title_flashcard_detail"
-            android:parentActivityName=".FlashcardListActivity" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".DeckListActivity" />
-        </activity>
-        <activity
             android:name="com.example.gtflashcards.NewDeckActivity"
             android:label="@string/title_activity_new_deck" >
         </activity>
@@ -82,6 +66,22 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.gtflashcards.CourseDeptListActivity" />
+        </activity>
+        <activity
+            android:name="com.example.gtflashcards.FlashcardActivity"
+            android:label="@string/title_activity_flashcard"
+            android:parentActivityName="com.example.gtflashcards.FlashcardListActivty" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.gtflashcards.FlashcardListActivty" />
+        </activity>
+        <activity
+            android:name="com.example.gtflashcards.FlashcardListActivty"
+            android:label="@string/title_activity_flashcard_list_activty" 
+            android:parentActivityName="com.example.gtflashcards.DeckListActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.gtflashcards.DeckListActivity" />
         </activity>
     </application>
 

@@ -23,6 +23,9 @@
     <string name="new_flashcard">New Flashcard</string>
     <string name="my_decks">My Decks</string>
     <string name="browse_cloud">Browse Cloud</string>
-	<string name="delete">Delete</string>
-	
+    <string name="delete">Delete</string>
+    <string name="title_activity_flashcard">FlashcardActivity</string>
+    <string name="title_activity_flashcard2">Flashcard2Activity</string>
+    <string name="title_activity_flashcard_list_activty">FlashcardListActivty</string>
+
 </resources>

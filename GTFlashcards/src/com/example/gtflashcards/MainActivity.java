@@ -18,6 +18,9 @@ public class MainActivity extends Activity {
 	static ArrayList<Deck> decks = null;
 	static ArrayList<GTFlashcards> fc = null;
 	static ArrayList<String> courseDepts = null;
+	
+	static int currentDeckIndex = -1;
+	static int currentFlashcardIndex = -1;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -89,11 +92,6 @@ public class MainActivity extends Activity {
     	startActivity(intent);
     }
     
-    public void goToFlashcardListActivity(View view) {
-    	Intent intent = new Intent(this, FlashcardListActivity.class);
-    	startActivity(intent);
-    }
-    
     public void goToNewDeckActivity(View view) {
     	Intent intent = new Intent(this, NewDeckActivity.class);
     	startActivity(intent);
@@ -133,6 +131,20 @@ public class MainActivity extends Activity {
     	courseDepts.add("CS");
     	courseDepts.add("MATH");
     	courseDepts.add("ECE");
+    }
+    
+    public static GTFlashcards getCurrentFlashcard() {
+    	if (currentDeckIndex > -1 && currentFlashcardIndex > -1) {
+    		return decks.get(currentDeckIndex).getFlashcards().get(currentFlashcardIndex);
+    	}
+    	return null;
+    }
+    
+    public static Deck getCurrentDeck() {
+    	if (currentDeckIndex > -1) {
+    		return decks.get(currentDeckIndex);
+    	}
+    	return null;
     }
 
 }

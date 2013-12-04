@@ -14,6 +14,11 @@ public class Deck {
 		this.flashcardCount = 0;
 		
 		flashcards = new ArrayList<GTFlashcards>();
+		flashcards.add(new GTFlashcards(1, "rsaez", "Big-o of insertion sort", "O(n^2)", "CS", "1332", 0, 0, true, false));
+		flashcards.add(new GTFlashcards(1, "rsaez", "What is in-place sorting", "when sorting doesnt need extra space", "CS", "1332", 0, 0, true, false));
+		flashcards.add(new GTFlashcards(1, "rsaez", "Set", "unordered collection of entities, dulicates not allowed", "CS", "1332", 0, 0, true, false));
+		flashcards.add(new GTFlashcards(1, "rsaez", "Bag", "unordered list, duplicates allowed", "CS", "1332", 0, 0, true, false));
+		
 	}
 	
 	public ArrayList<GTFlashcards> getFlashcards() {
@@ -30,5 +35,13 @@ public class Deck {
 	
 	public String getName() {
 		return name;
+	}
+	
+	public ArrayList<String> getFlashcardNames() {
+		ArrayList<String> flashcardNames = new ArrayList<String>();
+		for (GTFlashcards f : flashcards) {
+			flashcardNames.add(f.question);
+		}
+		return flashcardNames;
 	}
 }
