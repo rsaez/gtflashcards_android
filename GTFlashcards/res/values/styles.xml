@@ -17,8 +17,11 @@
     <style name="AppTheme" parent="AppBaseTheme">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
         <item name="android:buttonStyle">@style/ButtonAppTheme</item>
-
     	<item name="android:imageButtonStyle">@style/ImageButtonAppTheme</item>
+    	<item name="android:background">@color/color.black</item>
+    	<item name="android:windowBackground">@color/color.black</item>
+      	<item name="android:colorBackground">@color/color.black</item>
+      	<item name="android:actionBarStyle">@style/MyActionBar</item>
     </style>
 
     <style name="LoginFormContainer">
@@ -32,4 +35,7 @@
         
     </style>
 
+    <style name="MyActionBar" parent="@android:style/Widget.Holo.Light.ActionBar">
+        <item name="android:background">#000000</item>
+    </style>
 </resources>

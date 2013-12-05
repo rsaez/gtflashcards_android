@@ -22,6 +22,7 @@ public final class R {
     public static final class attr {
     }
     public static final class color {
+        public static final int color_black=0x7f05000a;
         public static final int color_blue=0x7f050005;
         public static final int color_gold0=0x7f050001;
         public static final int color_gold1=0x7f050002;
@@ -31,6 +32,7 @@ public final class R {
         public static final int color_navyblue1=0x7f050007;
         public static final int color_navyblue2=0x7f050008;
         public static final int color_navyblue3=0x7f050009;
+        public static final int color_white=0x7f05000b;
         public static final int color_yellow=0x7f050000;
     }
     public static final class dimen {
@@ -187,9 +189,10 @@ public final class R {
         /**  Application theme. 
          */
         public static final int AppTheme=0x7f080001;
-        public static final int ButtonAppTheme=0x7f080004;
-        public static final int ImageButtonAppTheme=0x7f080005;
+        public static final int ButtonAppTheme=0x7f080005;
+        public static final int ImageButtonAppTheme=0x7f080006;
         public static final int LoginFormContainer=0x7f080002;
+        public static final int MyActionBar=0x7f080004;
         public static final int mButtons=0x7f080003;
     }
 }

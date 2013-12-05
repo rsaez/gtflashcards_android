@@ -11,4 +11,7 @@
     <color name="color.navyblue1">#001d3c</color>
     <color name="color.navyblue2">#00162d</color>
     <color name="color.navyblue3">#000b16</color>
+    
+    <color name="color.black">#000000</color>
+    <color name="color.white">#ffffff</color>
 </resources>
