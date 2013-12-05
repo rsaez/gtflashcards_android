@@ -9,10 +9,10 @@ import android.util.Log;
 
 import com.loopj.android.http.JsonHttpResponseHandler;
 
-public class MyJsonHttpResponseHandler extends JsonHttpResponseHandler {
+public class CourseDeptJsonHttpResponseHandler extends JsonHttpResponseHandler {
 	ArrayList<String> results;
 	
-	public MyJsonHttpResponseHandler(ArrayList<String> r) {
+	public CourseDeptJsonHttpResponseHandler(ArrayList<String> r) {
 		super();
 		results = r;
 	}

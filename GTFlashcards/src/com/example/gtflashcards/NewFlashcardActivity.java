@@ -3,6 +3,8 @@ package com.example.gtflashcards;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.json.JSONException;
+
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -21,10 +23,15 @@ public class NewFlashcardActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_new_flashcard);
 
-		addItemsToDeckSpinner();
+		try {
+			addItemsToDeckSpinner();
+		} catch (JSONException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
-	public void addItemsToDeckSpinner() {
+	public void addItemsToDeckSpinner() throws JSONException {
 		deckSpinner = (Spinner) findViewById(R.id.deck_spinner);
 		ArrayList<String> deckNames = MainActivity.getDeckNames();
 		deckNames.add(0, "No Deck");

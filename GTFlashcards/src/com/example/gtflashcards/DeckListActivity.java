@@ -1,6 +1,8 @@
 
 package com.example.gtflashcards;
 
+import org.json.JSONException;
+
 import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -28,8 +30,13 @@ public class DeckListActivity extends ListActivity {
 
 		setupActionBar();
 		
-		setListAdapter(new ArrayAdapter<String>(this,
-				android.R.layout.simple_list_item_1, MainActivity.getDeckNames()));
+		try {
+			setListAdapter(new ArrayAdapter<String>(this,
+					android.R.layout.simple_list_item_1, MainActivity.getDeckNames()));
+		} catch (JSONException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 		listview = getListView();
 		listview.setOnItemClickListener(new OnItemClickListener(){
@@ -44,6 +51,11 @@ public class DeckListActivity extends ListActivity {
 		});
 		
 	}
+	
+	
+	
+	
+	
 	
 	/**
 	 * Set up the {@link android.app.ActionBar}.

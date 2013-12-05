@@ -2,6 +2,8 @@ package com.example.gtflashcards;
 
 import java.util.ArrayList;
 
+import org.json.JSONException;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
@@ -10,6 +12,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.example.gtflashcards.http_request.GTFlashcardsAPI;
 import com.example.gtflashcards.objects.Deck;
 import com.example.gtflashcards.objects.GTFlashcards;
 
@@ -49,6 +52,8 @@ public class MainActivity extends Activity {
 		
 		
 		setContentView(R.layout.activity_main);
+		
+		downloadCourseDeptsFromServer();
 
 	}
 
@@ -102,8 +107,11 @@ public class MainActivity extends Activity {
     	startActivity(intent);
     }
     
-    public static ArrayList<String> getDeckNames() {
+    public static ArrayList<String> getDeckNames() throws JSONException {
     	ArrayList<String> deckNames = new ArrayList<String>(); 
+    	
+    	//decks = GTFlashcardsAPI.listDeck();
+    	
     	for (Deck deck : decks) {
     		deckNames.add(deck.getName());
     	}
@@ -127,10 +135,14 @@ public class MainActivity extends Activity {
     
     public static void downloadCourseDeptsFromServer() {
     	//todo: download course codes from server here
+    	/*
     	courseDepts = new ArrayList<String>();
     	courseDepts.add("CS");
     	courseDepts.add("MATH");
     	courseDepts.add("ECE");
+    	*/
+    	
+    	courseDepts = GTFlashcardsAPI.getCourseDept();
     }
     
     public static GTFlashcards getCurrentFlashcard() {

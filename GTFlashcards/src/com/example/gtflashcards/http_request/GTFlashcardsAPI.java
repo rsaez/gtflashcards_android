@@ -7,6 +7,7 @@ import org.json.JSONException;
 
 import android.util.Log;
 
+import com.example.gtflashcards.objects.Deck;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.JsonHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
@@ -34,63 +35,20 @@ public class GTFlashcardsAPI {
     }
     
     
-    public static void listDeck() throws JSONException {
+    public static ArrayList<Deck> listDeck() throws JSONException {
     	
-        GTFlashcardsRestClient.get("deck", null, new JsonHttpResponseHandler() {
-            
-            @Override
-            public void onSuccess(JSONArray decks) {
-                Log.v("Rest Call", "List My Decks ");
-                
-                for (int i = 0; i < decks.length(); i++) {
-                	
-                }
-                   
-            }
-            
-        });        
-    }
-    
-    public static void getCourseDeptString() {
+    	ArrayList<Deck> results = new ArrayList<Deck>();
     	
-        GTFlashcardsRestClient.get("course", null, new AsyncHttpResponseHandler() {
-            
-            @Override
-            public void onSuccess(String response) {
-                    Log.v("Rest Call", "List Course " + response);
-            }
-                    
-        });
+        GTFlashcardsRestClient.get("deck", null, new DeckJsonHttpResponseHandler(results));
         
+        return results;
     }
-    
+
     public static ArrayList<String> getCourseDept(){
 
         ArrayList<String> results = new ArrayList<String>();
         
-        GTFlashcardsRestClient.get("course", null, new MyJsonHttpResponseHandler(results));
-        
-        /*
-        GTFlashcardsRestClient.get("course", null, new JsonHttpResponseHandler() {
-            
-            @Override
-            public void onSuccess(JSONArray depts) {
-                Log.v("Rest Call", "List Course Depts ");
-                
-                for (int i = 0; i < depts.length(); i++) {
-                	try {
-						//results.add(depts.getJSONObject(i).getString("course_dept"));
-                		System.out.println(depts.getJSONObject(i).getString("course_dept"));
-					} catch (JSONException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}
-                }
-                   
-            }
-            
-        });  
-        */
+        GTFlashcardsRestClient.get("course", null, new CourseDeptJsonHttpResponseHandler(results));
         
         return results;
     }
