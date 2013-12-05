@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color.yellow">#fff917</color>
+    <color name="color.gold0">#eeb211</color>
+    <color name="color.gold1">#be8e0d</color>
+    <color name="color.gold2">#8e6a0a</color>
+    <color name="color.gold3">#473505</color>
+    
+    <color name="color.blue">#00336a</color>
+    <color name="color.navyblue0">#00254c</color>
+    <color name="color.navyblue1">#001d3c</color>
+    <color name="color.navyblue2">#00162d</color>
+    <color name="color.navyblue3">#000b16</color>
+</resources>
