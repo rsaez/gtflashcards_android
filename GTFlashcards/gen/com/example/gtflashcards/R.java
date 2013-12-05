@@ -44,7 +44,13 @@ public final class R {
         public static final int activity_vertical_margin=0x7f060001;
     }
     public static final class drawable {
-        public static final int ic_launcher=0x7f020000;
+        public static final int apptheme_btn_default_disabled_focused_holo_light=0x7f020000;
+        public static final int apptheme_btn_default_disabled_holo_light=0x7f020001;
+        public static final int apptheme_btn_default_focused_holo_light=0x7f020002;
+        public static final int apptheme_btn_default_holo_light=0x7f020003;
+        public static final int apptheme_btn_default_normal_holo_light=0x7f020004;
+        public static final int apptheme_btn_default_pressed_holo_light=0x7f020005;
+        public static final int ic_launcher=0x7f020006;
     }
     public static final class id {
         public static final int action_forgot_password=0x7f0a0025;
@@ -179,9 +185,11 @@ public final class R {
          */
         public static final int AppBaseTheme=0x7f080000;
         /**  Application theme. 
- All customizations that are NOT specific to a particular API-level can go here. 
          */
         public static final int AppTheme=0x7f080001;
+        public static final int ButtonAppTheme=0x7f080004;
+        public static final int ImageButtonAppTheme=0x7f080005;
         public static final int LoginFormContainer=0x7f080002;
+        public static final int mButtons=0x7f080003;
     }
 }
