@@ -1,9 +1,14 @@
 package com.example.gtflashcards;
 
+import java.util.ArrayList;
+import java.util.Collections;
+
+import com.example.gtflashcards.objects.Deck;
 import com.example.gtflashcards.objects.GTFlashcards;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.app.ActivityManager;
 import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
@@ -17,6 +22,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.View.OnClickListener;
+import android.widget.ArrayAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -107,7 +113,23 @@ private boolean mShowingBack = false;
         
         this.setTitle((MainActivity.currentFlashcardIndex+1) + " of " + MainActivity.getCurrentDeck().getFlashcards().size());
         
+        ShakeListener mShaker = new ShakeListener(this);
+	    mShaker.setOnShakeListener(new ShakeListener.OnShakeListener () {
+	    	public void onShake(){
+	    		shuffle();
+	    	}
+	    });
         
+        
+	}
+	
+	void shuffle() {
+		Deck deck = MainActivity.getCurrentDeck();
+		ArrayList<GTFlashcards> list = deck.getFlashcards();
+		Collections.shuffle(list);
+		MainActivity.currentFlashcardIndex = 0;
+		Intent intent = new Intent(this, FlashcardActivity.class);
+        startActivityForResult(intent, 500);
 	}
 
 	private void flipCard() {
@@ -181,6 +203,11 @@ private boolean mShowingBack = false;
 	
 	public void onClick(View v) {
 		//do nothing?
+	}
+	
+	@Override
+	public void onBackPressed(){
+		NavUtils.navigateUpFromSameTask(this);
 	}
 	
 	public void goToNextFlashcard() {

@@ -46,11 +46,11 @@ public class FlashcardListActivty extends ListActivity {
 		this.setTitle(MainActivity.getCurrentDeck().getName());
 		
 		ShakeListener mShaker = new ShakeListener(this);
-	     mShaker.setOnShakeListener(new ShakeListener.OnShakeListener () {
-	         public void onShake(){
-	        	 shuffle();
-	         }
-	     });
+	    mShaker.setOnShakeListener(new ShakeListener.OnShakeListener () {
+	    	public void onShake(){
+	    		shuffle();
+	    	}
+	    });
 	}
 	
 	/**
@@ -101,7 +101,6 @@ public class FlashcardListActivty extends ListActivity {
 		Deck deck = MainActivity.getCurrentDeck();
 		ArrayList<GTFlashcards> list = deck.getFlashcards();
 		Collections.shuffle(list);
-		deck.setFlashcards(list);
 		setListAdapter(new ArrayAdapter<String>(this,
 				android.R.layout.simple_list_item_1, deck.getFlashcardNames()));
 		
