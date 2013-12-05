@@ -118,6 +118,10 @@ public class MainActivity extends Activity {
     	return deckNames;
     }
     
+    public static void setCurrentDeck(ArrayList<GTFlashcards> deck){
+    	getCurrentDeck().setFlashcards(deck);
+    }
+    
     public static ArrayList<String> getFcNames() {
     	ArrayList<String> fcNames = new ArrayList<String>(); 
     	for (GTFlashcards flashcard : fc) {
