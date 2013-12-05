@@ -60,6 +60,10 @@ public class Deck {
 		return name;
 	}
 	
+	public int getId() {
+		return id;
+	}
+	
 	public ArrayList<String> getFlashcardNames() {
 		ArrayList<String> flashcardNames = new ArrayList<String>();
 		for (GTFlashcards f : flashcards) {

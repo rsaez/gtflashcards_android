@@ -73,8 +73,14 @@ public class DeckListActivity extends ListActivity {
 
 			        public void onItemClick(AdapterView<?> parent, View view, int position, long id){
 			        	MainActivity.currentDeckIndex = position;
+			        	Log.v("Rest Call", "List Decks, position = " + position);
+			        	
 			        	//System.out.println("***item="+listview.getItemAtPosition(position));
-			        	Intent intent = new Intent(getApplicationContext(), FlashcardListActivty.class);
+			        	
+			        	Intent intent = new Intent(getApplicationContext(), FlashcardListActivity.class);
+			        	intent.putExtra("deck_id", "" + deckList.get(position).getId());
+			        	intent.putExtra("deck_name", "" + deckList.get(position).getName());
+			        	
 			            //intent.putExtra("deck_name", listview.getItemAtPosition(position).toString());
 			            startActivity(intent);
 			       }
