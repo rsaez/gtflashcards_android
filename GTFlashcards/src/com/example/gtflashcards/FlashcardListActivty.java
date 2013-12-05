@@ -25,7 +25,7 @@ import android.widget.ListView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 
-public class FlashcardListActivity extends ListActivity {
+public class FlashcardListActivty extends ListActivity {
 
 	ListView listview;
 	
@@ -37,8 +37,8 @@ public class FlashcardListActivity extends ListActivity {
 		
 		Intent intent = getIntent();
 		
-		String deckId = intent.getExtras().getString("deck_id");
-		String deckName = intent.getExtras().getString("deck_name");
+		final String deckId = intent.getExtras().getString("deck_id");
+		final String deckName = intent.getExtras().getString("deck_name");
 		
 		Log.v("Intent", "deck id = " + deckId + ", deck name = " + deckName);
 		
@@ -102,8 +102,10 @@ public class FlashcardListActivity extends ListActivity {
 		        	questions.add(flashcard.getQuestion());
 		        }
 		        
-				setListAdapter(new ArrayAdapter<String>(FlashcardListActivity.this,
+				setListAdapter(new ArrayAdapter<String>(FlashcardListActivty.this,
 						android.R.layout.simple_list_item_1, questions));
+				
+				//MainActivity.fc = cardsInDeck;
 				
 				listview = getListView();
 				listview.setOnItemClickListener(new OnItemClickListener(){
@@ -111,6 +113,10 @@ public class FlashcardListActivity extends ListActivity {
 			        public void onItemClick(AdapterView<?> parent, View view, int position, long id){
 			        	MainActivity.currentFlashcardIndex = position;
 			        	Intent intent = new Intent(getApplicationContext(), FlashcardActivity.class);
+			        	
+			        	intent.putExtra("deck_id", "" + deckId);
+			        	intent.putExtra("deck_name", "" + deckName);
+			        	
 			            startActivity(intent);
 			       }
 				});

@@ -77,7 +77,7 @@ public class DeckListActivity extends ListActivity {
 			        	
 			        	//System.out.println("***item="+listview.getItemAtPosition(position));
 			        	
-			        	Intent intent = new Intent(getApplicationContext(), FlashcardListActivity.class);
+			        	Intent intent = new Intent(getApplicationContext(), FlashcardListActivty.class);
 			        	intent.putExtra("deck_id", "" + deckList.get(position).getId());
 			        	intent.putExtra("deck_name", "" + deckList.get(position).getName());
 			        	

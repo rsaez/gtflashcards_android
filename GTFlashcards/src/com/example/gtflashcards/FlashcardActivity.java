@@ -89,6 +89,7 @@ private boolean mShowingBack = false;
 		// Show the Up button in the action bar.
 		setupActionBar();
 		
+		
 		if (savedInstanceState == null) {
             getFragmentManager()
                     .beginTransaction()
@@ -96,6 +97,10 @@ private boolean mShowingBack = false;
                     .commit();
         }
 		
+		Intent intent = getIntent();
+		
+		final String deckId = intent.getExtras().getString("deck_id");
+		final String deckName = intent.getExtras().getString("deck_name");
 		
 		// Gesture detection
         gestureDetector = new GestureDetector(this, new MyGestureDetector());

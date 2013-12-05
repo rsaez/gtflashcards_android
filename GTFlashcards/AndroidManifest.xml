@@ -72,13 +72,13 @@
         <activity
             android:name="com.example.gtflashcards.FlashcardActivity"
             android:label="@string/title_activity_flashcard"
-            android:parentActivityName="com.example.gtflashcards.FlashcardListActivity" >
+            android:parentActivityName="com.example.gtflashcards.FlashcardListActivty" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.gtflashcards.FlashcardListActivty" />
         </activity>
         <activity
-            android:name="com.example.gtflashcards.FlashcardListActivity"
+            android:name="com.example.gtflashcards.FlashcardListActivty"
             android:label="@string/title_activity_flashcard_list_activty" 
             android:parentActivityName="com.example.gtflashcards.DeckListActivity" >
             <meta-data

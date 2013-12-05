@@ -37,7 +37,7 @@ public class CourseCodeListActivity extends ListActivity {
 	        public void onItemClick(AdapterView<?> parent, View view, int position, long id){
 	        	Object ob = listview.getItemAtPosition(position);
 	        	
-	        	Intent intent = new Intent(getApplicationContext(), FlashcardListActivity.class);
+	        	Intent intent = new Intent(getApplicationContext(), FlashcardListActivty.class);
 	            //intent.putExtra("deck_name", inName);
 	            startActivity(intent);
 	       }
