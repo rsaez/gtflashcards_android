@@ -36,6 +36,8 @@ public class FlashcardListActivty extends ListActivity {
 	            startActivity(intent);
 	       }
 		});
+		
+		this.setTitle(MainActivity.getCurrentDeck().getName());
 	}
 	
 	/**

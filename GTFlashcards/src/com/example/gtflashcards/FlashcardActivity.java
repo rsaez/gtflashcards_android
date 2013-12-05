@@ -107,6 +107,7 @@ private boolean mShowingBack = false;
         
         flashcard = MainActivity.getCurrentFlashcard();
         
+        this.setTitle((MainActivity.currentFlashcardIndex+1) + " of " + MainActivity.getCurrentDeck().getFlashcards().size());
         
         
 	}
