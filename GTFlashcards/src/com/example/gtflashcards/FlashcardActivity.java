@@ -44,9 +44,14 @@ private boolean mShowingBack = false;
             
         	View view = inflater.inflate(R.layout.fragment_flashcard_front, container, false);
 
-        	TextView t=(TextView)view.findViewById(R.id.question); 
-            t.setText(flashcard.getQuestion());
+        	TextView questionTextView = (TextView)view.findViewById(R.id.question); 
+        	questionTextView.setText(flashcard.getQuestion());
           
+            TextView tagsTextView = (TextView)view.findViewById(R.id.tags); 
+            tagsTextView.setText("Tags: "+flashcard.getTagsString());
+            
+            System.out.println("***"+flashcard.getTagsString());
+            
             return view;
         }
     }
@@ -62,8 +67,12 @@ private boolean mShowingBack = false;
         	
         	View view = inflater.inflate(R.layout.fragment_flashcard_back, container, false);
 
-        	TextView t=(TextView)view.findViewById(R.id.answer); 
-            t.setText(flashcard.getAnswer());
+        	TextView answerTextView = (TextView)view.findViewById(R.id.answer); 
+        	answerTextView.setText("Answer: "+flashcard.getAnswer());
+            
+            TextView tagsTextView = (TextView)view.findViewById(R.id.tags); 
+            tagsTextView.setText("Tags: "+flashcard.getTagsString());
+            
           
             return view;
         }
