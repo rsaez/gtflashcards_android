@@ -1,5 +1,11 @@
 package com.example.gtflashcards;
 
+import java.util.ArrayList;
+import java.util.Collections;
+
+import com.example.gtflashcards.objects.Deck;
+import com.example.gtflashcards.objects.GTFlashcards;
+
 import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -38,6 +44,13 @@ public class FlashcardListActivty extends ListActivity {
 		});
 		
 		this.setTitle(MainActivity.getCurrentDeck().getName());
+		
+		ShakeListener mShaker = new ShakeListener(this);
+	     mShaker.setOnShakeListener(new ShakeListener.OnShakeListener () {
+	         public void onShake(){
+	        	 shuffle();
+	         }
+	     });
 	}
 	
 	/**
@@ -85,7 +98,13 @@ public class FlashcardListActivty extends ListActivity {
     }
     
 	void shuffle() {
-		//todo: implement shuffle
+		Deck deck = MainActivity.getCurrentDeck();
+		ArrayList<GTFlashcards> list = deck.getFlashcards();
+		Collections.shuffle(list);
+		deck.setFlashcards(list);
+		setListAdapter(new ArrayAdapter<String>(this,
+				android.R.layout.simple_list_item_1, deck.getFlashcardNames()));
+		
 	}
 	
 	void renameDeck() {
