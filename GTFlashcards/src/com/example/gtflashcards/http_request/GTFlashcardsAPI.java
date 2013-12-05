@@ -7,6 +7,7 @@ import org.json.JSONException;
 
 import android.util.Log;
 
+import com.example.gtflashcards.MainActivity;
 import com.example.gtflashcards.objects.Deck;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.JsonHttpResponseHandler;
@@ -39,7 +40,10 @@ public class GTFlashcardsAPI {
     	
     	ArrayList<Deck> results = new ArrayList<Deck>();
     	
+    	
         GTFlashcardsRestClient.get("deck", null, new DeckJsonHttpResponseHandler(results));
+        
+        Log.v("Rest Call", "List Decks, number of API rows " + results.size());
         
         return results;
     }
