@@ -1,5 +1,6 @@
 package com.example.gtflashcards;
 
+import com.example.gtflashcards.http_request.GTFlashcardsAPI;
 import com.example.gtflashcards.objects.Deck;
 
 import android.app.Activity;
@@ -33,6 +34,8 @@ public class NewDeckActivity extends Activity {
 			System.out.println("DeckName="+deckName);
 			int id = -1; //todo: use real id from server
 	    
+			GTFlashcardsAPI.createDeck(deckName);
+			
 			Deck deck = new Deck(id, deckName);
 			MainActivity.decks.add(deck);
 			
