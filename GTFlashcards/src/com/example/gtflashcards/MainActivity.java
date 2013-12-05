@@ -19,8 +19,8 @@ public class MainActivity extends Activity {
 	static ArrayList<GTFlashcards> fc = null;
 	static ArrayList<String> courseDepts = null;
 	
-	static int currentDeckIndex = -1;
-	static int currentFlashcardIndex = -1;
+	static int currentDeckIndex = 0;
+	static int currentFlashcardIndex = 0;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

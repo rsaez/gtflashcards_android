@@ -132,13 +132,11 @@ public class GTFlashcards extends Application{
 	}
 	
 	public String getTagsString() {
-		System.out.println("***"+tags.size());
 		String tagString = "";
 		for (int i = 0; i < tags.size()-1; i++) {
 			tagString += tags.get(i) + ", ";
 		}
 		tagString += tags.get(tags.size()-1);
-		System.out.println("***"+tagString);
 		return tagString;
 	}
 }

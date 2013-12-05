@@ -8,36 +8,38 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".NewDeckActivity" >
 
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/create_flashcard"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="22dp"
-        android:layout_marginTop="27dp"
-        android:text="New Deck"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-
     <EditText
         android:id="@+id/deck_name_input"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/create_flashcard"
+        android:layout_alignRight="@+id/create_flashcard"
         android:layout_below="@+id/textView1"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="25dp"
-        android:hint="Deck Name"
-        android:ems="10" />
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:hint="Deck Name" >
+
+        <requestFocus />
+    </EditText>
 
     <Button
         android:id="@+id/create_flashcard"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
         android:layout_below="@+id/deck_name_input"
-        android:layout_marginLeft="28dp"
-        android:layout_marginTop="33dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="36dp"
         android:onClick="createDeck"
         android:text="Create Deck" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/deck_name_input"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="55dp"
+        android:text="New Deck"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
 
 </RelativeLayout>

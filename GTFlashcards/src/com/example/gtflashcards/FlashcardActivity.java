@@ -50,8 +50,6 @@ private boolean mShowingBack = false;
             TextView tagsTextView = (TextView)view.findViewById(R.id.tags); 
             tagsTextView.setText("Tags: "+flashcard.getTagsString());
             
-            System.out.println("***"+flashcard.getTagsString());
-            
             return view;
         }
     }

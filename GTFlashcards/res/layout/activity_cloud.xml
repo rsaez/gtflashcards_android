@@ -8,19 +8,32 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".CloudActivity" >
 
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/browseByTagButton"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="32dp"
+        android:text="Browse by..."
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
     <Button
         android:id="@+id/browseByCourseButton"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="GT Course"
-        android:onClick="goToCourseDeptListActivity" />
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="25dp"
+        android:onClick="goToCourseDeptListActivity"
+        android:text="GT Course" />
 
     <Button
         android:id="@+id/browseByTagButton"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/browseByCourseButton"
         android:layout_below="@+id/browseByCourseButton"
+        android:layout_centerHorizontal="true"
         android:text="Tag" />
 
 </RelativeLayout>
